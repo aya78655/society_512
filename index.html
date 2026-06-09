@@ -402,7 +402,7 @@ function submitMulti() {
 
 function showTextAnswer() {
   const q = currentQ;
-  hide('input-area');
+  document.getElementById('input-area').innerHTML = '';
   show('answer-area');
   const ab = document.getElementById('answer-box');
   ab.className = 'answer-box neutral';
@@ -411,7 +411,7 @@ function showTextAnswer() {
 }
 
 function showAnswerBox(isCorrect, q) {
-  hide('input-area'); show('answer-area');
+  document.getElementById('input-area').innerHTML = ''; show('answer-area');
   if (isCorrect) score++;
   const ab = document.getElementById('answer-box');
   ab.className = 'answer-box '+(isCorrect?'correct':'wrong');
