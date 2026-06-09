@@ -346,7 +346,9 @@ function showQuestion() {
   document.getElementById('q-category').textContent = q.category;
   document.getElementById('q-text').textContent = q.text;
   hide('answer-area');
+  show('input-area');
   const ia = document.getElementById('input-area');
+  ia.innerHTML = '';
   if (q.type === 'text') {
     ia.innerHTML = `<div class="note-box">記述問題です。自分で考えてから「答えを見る」を押してください。</div><button class="btn" onclick="showTextAnswer()">答えを見る</button>`;
   } else if (q.type === 'multi') {
